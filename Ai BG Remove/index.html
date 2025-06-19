@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Background App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Image Background Remover</h1>
+            <p>Powered by remove.bg</p>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <h2>1️⃣ Upload Your Image</h2>
+                <input type="file" id="imageUpload" accept="image/*">
+                <label for="imageUpload" class="upload-button">Choose Image</label>
+                <p class="file-name-display"></p>
+                <button id="removeBgButton" disabled>3️⃣ Remove Background</button>
+                <div id="loadingIndicator" class="loading" style="display: none;">
+                    Processing...
+                    <div class="spinner"></div>
+                </div>
+                <p id="apiError" class="error-message" style="display: none;"></p>
+            </section>
+
+            <section class="results-section" style="display: none;">
+                <div class="image-previews">
+                    <div class="image-container">
+                        <h3>Original Image</h3>
+                        <img id="originalImagePreview" src="#" alt="Original Image Preview">
+                    </div>
+                    <div class="image-container">
+                        <h3>Background Removed</h3>
+                        <img id="resultImagePreview" src="#" alt="Result Image Preview">
+                    </div>
+                </div>
+
+                <h2>4️⃣ Customize Your Background</h2>
+                <div class="background-options">
+                    <button id="keepTransparentButton">Keep Transparent</button>
+                    <div>
+                        <label for="bgColorPicker">Choose Color:</label>
+                        <input type="color" id="bgColorPicker" value="#ffffff">
+                        <button id="applyColorBgButton">Apply Color</button>
+                    </div>
+                    <div>
+                        <label for="bgImageUpload">Upload Background Image:</label>
+                        <input type="file" id="bgImageUpload" accept="image/*">
+                        <label for="bgImageUpload" class="upload-button small">Choose BG Image</label>
+                        <button id="applyImageBgButton" disabled>Apply Image BG</button>
+                        <p class="bg-file-name-display"></p>
+                    </div>
+                </div>
+
+                <h2>5️⃣ Download Your Photo</h2>
+                <button id="downloadButton">Download Image</button>
+            </section>
+
+            <section class="info-section">
+                <h2>Why choose this app (powered by remove.bg)?</h2>
+                <p>✂️ <strong>Effortlessly delete your image background with just one click:</strong> the artificial intelligence will automatically detect your subject and separate it from the background while maintaining the highest quality.</p>
+                <p>⏳ <strong>Save time:</strong> what used to take hours of manual work can now be achieved automatically. You can edit on the go, from anywhere, in just a few seconds.</p>
+                <p>👓 <strong>Get exceptional quality:</strong> our high-quality background remover handles any edges, such as hair or other challenging elements, at the highest quality level. In other words, you will get a flawless transparent background without having any foreground elements contaminated.</p>
+                <p>🔀 <strong>Change image backgrounds:</strong> you can leave your background transparent if you’d like, but if you want something more creative, you can replace it with a colorful one or with an image from our library (or your own upload!). The possibilities are endless.</p>
+                <p>🎨 <strong>Upload your own background photo:</strong> you can also upload your own image to use as a new background. Simple, quick, and efficient. 🚀</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2023 Your Remove BG App</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
